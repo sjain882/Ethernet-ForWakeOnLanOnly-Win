@@ -1,9 +1,5 @@
-﻿using System.Diagnostics;
-using System.Net.NetworkInformation;
-using System.Windows.Forms;
-using System.Management;
-using System;
-using System.Configuration;
+﻿using System.Configuration;
+using System.Diagnostics;
 
 namespace DisableEthernetAfterWakeup
 {
@@ -14,49 +10,9 @@ namespace DisableEthernetAfterWakeup
 
             DisableNetworkAdapter(ConfigurationManager.AppSettings.Get("AdapterName"));
 
-            /*
-
-            string adapterName = ConfigurationManager.AppSettings.Get("AdapterName");
-
-            if (!string.IsNullOrEmpty(adapterName))
-            {
-
-                // Check if adapter exists (this function only returns enabled network adapters - good in this case)
-                NetworkInterface[] networkCards = System.Net.NetworkInformation.NetworkInterface.GetAllNetworkInterfaces();
-                bool adapterNameExists = false;
-
-                foreach (NetworkInterface networkCard in networkCards)
-                {
-                    if (networkCard.Name.Equals(adapterName))
-                    {
-                        adapterNameExists = true;
-                    }
-                }
-
-                if (!adapterNameExists)
-                {
-                    MessageBox.Show("An enabled network adapter with name '" + adapterName + $"' was not found! \r\n");
-                    return;
-                }
-
-
-
-                // It must exist by this point, so disable it
-                // WMI is unreliable here so we will not use it (https://stackoverflow.com/a/6170507/12948636)
-                DisableNetworkAdapter(adapterName);
-
-                // Handoff back to Power Triggers
-                Environment.Exit(0);
-                return;
-
-            }
-            else
-            {
-                MessageBox.Show("Adapter name not set in config file! \r\nWoL may be unavailable!");
-                Environment.Exit(0);
-                return;
-            }
-            */
+            // Why are there no error checks or status updates?
+            // See reasons outlined in EnableEthernetBeforeSleep project
+            // No point adding them here if I can't add them in the other half...
         }
 
 
@@ -89,7 +45,5 @@ namespace DisableEthernetAfterWakeup
             psi.CreateNoWindow = true;
             p.Start();
         }
-
-
     }
 }
