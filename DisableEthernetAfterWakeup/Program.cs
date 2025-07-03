@@ -12,6 +12,10 @@ namespace DisableEthernetAfterWakeup
         static void Main(string[] args)
         {
 
+            DisableNetworkAdapter(ConfigurationManager.AppSettings.Get("AdapterName"));
+
+            /*
+
             string adapterName = ConfigurationManager.AppSettings.Get("AdapterName");
 
             if (!string.IsNullOrEmpty(adapterName))
@@ -52,6 +56,7 @@ namespace DisableEthernetAfterWakeup
                 Environment.Exit(0);
                 return;
             }
+            */
         }
 
 

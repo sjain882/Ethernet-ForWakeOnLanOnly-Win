@@ -15,7 +15,18 @@ namespace EnableEthernetBeforeSleep
     {
         static void Main(string[] args)
         {
-            string adapterName = ConfigurationManager.AppSettings.Get("AdapterName");
+
+            EnableNetworkAdapter(ConfigurationManager.AppSettings.Get("AdapterName"));
+
+
+            // DO NOT DO BELOW: It's commented out because Power Triggers cannot pause sleep until a process has exited.
+            // It seems this is not possible in Windows without heavy driver reverse engineering.
+            // Thus, the objective is to complete execution as fast as possible, rather than try to pause sleep until an ethernet connection has been established.
+            // This should still be fine in most cases as ethernet is quite quick to connect.
+            // So - no error checks, no status updates, just do it and hope for the best :)
+            /*
+            
+            // string adapterName = ConfigurationManager.AppSettings.Get("AdapterName");
 
             if (!string.IsNullOrEmpty(adapterName))
             {
@@ -54,8 +65,7 @@ namespace EnableEthernetBeforeSleep
 
                 // Alternative to below: Just wait 5 seconds...
                 // System.Threading.Thread.Sleep(5000);
-
-
+                // 
                 // Check if adapter is connected
                 // Alternative would be to check NetConnectionStatus = 2 in Win32_NetworkAdapter
                 // https://learn.microsoft.com/en-gb/windows/win32/cimwin32prov/win32-networkadapter?redirectedfrom=MSDN/
@@ -102,8 +112,10 @@ namespace EnableEthernetBeforeSleep
                 Environment.Exit(0);
                 return;
             }
-        }
+            
+         */
 
+        }
 
 
         // Enable Disable Network Adapters: https://stackoverflow.com/a/18761206/12948636
