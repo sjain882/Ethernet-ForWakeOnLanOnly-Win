@@ -1,0 +1,46 @@
+https://www.tenforums.com/general-support/206665-run-command-before-going-sleep.html#post2560310
+
+https://archive.ph/wip/DStO6
+
+
+
+
+
+das10, post: 327591, member: 379 said: 
+
+RE: "there seems to be a Windows 7 era program, but all download links are broken".
+JFI: "Windows 7 Suspend/Resume Control" is available within the following Codeplex archive, but I have no idea whether it works as desired in Windows 11 or not.
+
+Internet Archive: View Archive
+
+Search for this specific project zip on that page: win7suspendresume.zip
+
+The win7suspendresume.zip project contains the Releases folder with 4 zipped releases, with "49d2ea10-7a2a-4265-81b0-0d8f3eb00d24" being the last one.
+
+That "49d2ea10-7a2a-4265-81b0-0d8f3eb00d24" contains an setup.exe together with an setup.msi file.
+VirusTotal
+
+Code:
+
+"Name": "Version 2.0.0.1",
+"ModifiedDate": "2013-02-05T08:19:15.957-08:00",       ***
+"49d2ea10-7a2a-4265-81b0-0d8f3eb00d24",                ***
+
+pn: Unfortunately, whilst on my VirtualBox Win11 virtual machine, I could install the software/service, the issues I had were :
+a) There is no way to trigger a proper sleep/suspend/resume in VirtualBox, so couldn't test any further.
+b) All the Program tabs were populated in accordance with what was running in the machine, except the Devices tab which threw the Fault shown (Issue was reported with Windows 10 so presumably the other functions worked in Win10 (?)).
+
+So experiment with caution on a real Win11 machine.
+
+
+
+
+
+
+
+
+https://superuser.com/a/1272661
+
+Having tried some of the prescribed methods in here, I was never able to get a script to run on sleep. The built-in Windows Task Scheduler facilities just didn't fix it.
+
+I found a small open source utility called "Power Triggers" or "Windows 7 Suspend/Resume Control". Despite not being well-polished or currently maintained, I found this tool to work on Windows 10 without issues. However, to run a script easily on suspend or resume, you have to use version 1.01 (aka release 1 in the archive), and not the latest version.
