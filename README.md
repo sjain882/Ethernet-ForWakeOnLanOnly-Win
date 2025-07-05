@@ -125,3 +125,5 @@ What actually happened:
 
 - This only leaves this repo's solution as the best approach - execute as fast as possible, without any error checking or status updates.
 - This gives us the best chance of WoL adapter successfully establishing a connection before sleep finishes (around 2s according to MSDN).
+- This solution works almost every time for me, even though I don't see the network icon changing from WiFi to Ethernet in the tray before the screen goes black!
+- I have a 100% success rate in being able to wake the PC with WoL, and use internet with fast WiFi speeds, all without any visible cues or usability delays.
