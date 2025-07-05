@@ -8,13 +8,11 @@
 - The WiFi card is in a PCIe slot and is powered down on S3 sleep
 - The BIOS offers no option to change this behaviour (e.g, HP/Dell proprietary)
 - Therefore, the WiFi connection is lost on sleep so WoL is not possible
-
-
+***
 - Due to physical limitations, direct Ethernet cannot be provided
 - Only a weak Powerline Ethernet connection can be provided with slow speeds
 - WoL, however, is fully functional with this connection
-
-
+***
 - Windows heavily prioritises any Ethernet/wired connection over WiFi/wireless
 - "Interface metric" workaround has not been respected for many years now
 - Therefore, we are stuck with slow Powerline Ethernet speeds
@@ -22,6 +20,7 @@
 
 > [!IMPORTANT]
 > Admin rights required!
+> 
 > You may experience issues if logged into a non-administrator account.
 
 ### How to execute tasks on suspend & resume?
@@ -31,20 +30,20 @@
   - Source: `Kernel-Power`
   - Event ID: `42` for suspend (EnableEthernetBeforeSleep)
   - Event ID: `107` for resume (DisableEthernetAfterWakeup)
-- This, however, is unreliable on some systems.
+- This, however, is **unreliable** on some systems.
     - I was unable to run the tasks manually for testing purposes.
     - Others reported the triggers never firing.
 
 #### Option 2: win7suspendresume / Power Triggers v2 
 - Special program that allows scheduling & logging of tasks on suspend/resume
 - Runs a background service that spawns scheduled tasks on a higher priority thread, meaning they're more likely to complete before sleep.
-- We will be using this program.
+- **We will be using this program.**
 - It appears to have some UAC bypass method to make the experience more seamless, but I haven't tested this on non-admin accounts (you might have to manually start the program as administrator on each login in these cases)
 - It was previously available on Codeplex before the shutdown - you can view it in a friendly format [here](https://codeplexarchive.org/project/win7suspendresume).
 
 ### Pre-requisite: Install win7suspendresume / Power Triggers v2
 
-Alternative to Steps 1-5 below: download a pre-made zip [here](https://github.com/sjain882/Ethernet-ForWakeOnLanOnly-Win/raw/refs/heads/main/Other/Win7SuspendResume%20Power%20Triggers%20v1.01.zip) directly in this repo. Otherwise, follow the below steps if you only trust the original source.
+**Alternative** to Steps 1-5 below: download a pre-made zip [here](https://github.com/sjain882/Ethernet-ForWakeOnLanOnly-Win/raw/refs/heads/main/Other/Win7SuspendResume%20Power%20Triggers%20v1.01.zip) directly in this repo. Otherwise, follow the below steps if you only trust the original source.
 
 1. Download `win7suspendresume.zip` from [here](https://archive.org/download/sylirana_ms_codeplex_zips/tars/mscodeplex-w-2.tar/.%2Fwin7suspendresume.zip) (sourced from the [Codeplex Archive](https://ia903400.us.archive.org/view_archive.php?archive=/12/items/sylirana_ms_codeplex_zips/tars/mscodeplex-w-2.tar) on archive.org) or [here](https://github.com/sjain882/Ethernet-ForWakeOnLanOnly-Win/raw/refs/heads/main/Other/win7suspendresume.zip) (copy stored in this repo)
 3. Extract the contents somewhere
