@@ -41,6 +41,14 @@
 - It appears to have some UAC bypass method to make the experience more seamless, but I haven't tested this on non-admin accounts (you might have to manually start the program as administrator on each login in these cases)
 - It was previously available on Codeplex before the shutdown - you can view it in a friendly format [here](https://codeplexarchive.org/project/win7suspendresume).
 
+### Pre-requisite: Setup system for WoL
+
+- Enable WoL options in BIOS
+- Enable WoL options in adapter settings
+- Enable allow device to wake computer and only allow magic packet to wake computer
+
+Full guide on how to achieve this is [here (Win10)](https://www.tenforums.com/tutorials/175328-how-enable-disable-wake-lan-wol-windows-10-a.html) or [here (Win11)](https://www.elevenforum.com/t/enable-or-disable-wake-on-lan-wol-in-windows-11.11872/)
+
 ### Pre-requisite: Install win7suspendresume / Power Triggers v2
 
 **Alternative** to Steps 1-5 below: download a pre-made zip [here](https://github.com/sjain882/Ethernet-ForWakeOnLanOnly-Win/raw/refs/heads/main/Other/Win7SuspendResume%20Power%20Triggers%20v1.01.zip) directly in this repo. Otherwise, follow the below steps if you only trust the original source.
