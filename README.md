@@ -1,4 +1,4 @@
-# Only use (Powerline) Ethernet as a Wake-On-LAN (WoL) provider - not as an internet connection
+# Use (Powerline) Ethernet only as a Wake-On-LAN (WoL) provider - not as an internet connection
 
 *No support provided*
 
