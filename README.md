@@ -45,7 +45,7 @@
 
 - Enable WoL options in BIOS
 - Enable WoL options in adapter settings
-- Enable allow device to wake computer and only allow magic packet to wake computer
+- Enable allow network adapter to wake computer and only allow magic packet to wake computer
 
 Full guide on how to achieve this is [here (Win10)](https://www.tenforums.com/tutorials/175328-how-enable-disable-wake-lan-wol-windows-10-a.html) or [here (Win11)](https://www.elevenforum.com/t/enable-or-disable-wake-on-lan-wol-in-windows-11.11872/)
 
