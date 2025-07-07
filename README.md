@@ -21,7 +21,7 @@
 > [!IMPORTANT]
 > Admin rights required!
 > 
-> You may experience issues if logged into a non-administrator account.
+> If you are on a non-admin account, you can still use this method, just with a small caveat (see Step 10 [here](https://github.com/sjain882/Ethernet-ForWakeOnLanOnly-Win?tab=readme-ov-file#pre-requisite-install-win7suspendresume--power-triggers-v2))
 
 ### How to execute tasks on suspend & resume?
 #### Option 1: Task Scheduler
@@ -33,6 +33,7 @@
 - This, however, is **unreliable** on some systems.
     - I was unable to run the tasks manually for testing purposes.
     - Others reported the triggers never firing.
+- NOTE: If you are on non-admin account, you must start Task Scheduler as administrator, then make task, then set "Run with highest privileges", then click "Change User" button under "use the following account" to change it to your normal/regular non-admin account
 
 #### Option 2: win7suspendresume / Power Triggers v2 
 - Special program that allows scheduling & logging of tasks on suspend/resume
@@ -60,7 +61,8 @@ Full guide on how to achieve this is [here (Win10)](https://www.tenforums.com/tu
 6. Add the `.zip` extension (so its `49d2ea10-7a2a-4265-81b0-0d8f3eb00d24.zip`)
 7. Extract the contents to somewhere suitable, e.g, `C:\Program Files\Power Triggers v2`
 8. Run the program - it should automatically add itself to startup (visible in Task Manager startup tab).
-9. NOTE: It appears to have some UAC bypass method to make the experience more seamless, but I haven't tested this on non-admin accounts (you might have to manually start the program as administrator on each login in these cases)
+9. If you are logged in as admin, no further steps required.
+10. If you are logged in as normal user, you will need to set the Startup shortcut to "Run As Administrator" in Compatibility tab, or manually start it as administrator yourself on each login.
 
 ### How to use
 
