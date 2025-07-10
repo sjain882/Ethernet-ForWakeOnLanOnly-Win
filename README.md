@@ -94,9 +94,17 @@ Full guide on how to achieve this is [here (Win10)](https://www.tenforums.com/tu
 
 14. Optionally click `Test`.
 
-15. Click `OK` on everything and sleep the PC then try to use WoL (via e.g, ASUS router UI or [Simple WoL App](https://github.com/herzhenr/simple-wake-on-lan))
+15. Click `OK` on everything and sleep the PC then try to use WoL
 
 16. Done.
+
+## How to WoL?
+
+-  ASUS Router UI
+- [Simple WoL App](https://github.com/herzhenr/simple-wake-on-lan) on Android/iOS
+- [WoLCmd on Windows from command line](https://www.depicus.com/wake-on-lan/wake-on-lan-cmd) (archive [page](https://web.archive.org/web/20250630044635/https://www.depicus.com/wake-on-lan/wake-on-lan-cmd), [zip](https://web.archive.org/web/20240630092642/https://www.depicus.com/downloads/wolcmd.zip))
+- [WoLCmd on macOS from command line](https://www.depicus.com/wake-on-lan/wake-on-lan-for-apple-mac) (archive [page](https://web.archive.org/web/20250630044635/https://www.depicus.com/wake-on-lan/wake-on-lan-for-apple-mac), [zip](https://web.archive.org/web/20250427065759/https://www.depicus.com/downloads/wolcmdmac.zip))
+
 
 ## Other approaches I considered
 
