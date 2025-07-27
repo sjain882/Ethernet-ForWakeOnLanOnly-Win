@@ -40,7 +40,7 @@
 - Runs a background service that spawns scheduled tasks on a higher priority thread, meaning they're more likely to complete before sleep.
 - **We will be using this program.**
 - It appears to have some UAC bypass method to make the experience more seamless, but I haven't tested this on non-admin accounts (you might have to manually start the program as administrator on each login in these cases)
-- It was previously available on Codeplex before the shutdown - you can view it in a friendly format [here](https://codeplexarchive.org/project/win7suspendresume).
+- It was previously available on Codeplex before the shutdown - you can view entire repo + source code in a friendly format [here](https://codeplexarchive.org/project/win7suspendresume), or an archive stored in this repository [here](https://github.com/sjain882/Ethernet-ForWakeOnLanOnly-Win/raw/refs/heads/main/Other/win7suspendresume.zip) or the archive.org copy [here](https://archive.org/download/sylirana_ms_codeplex_zips/tars/mscodeplex-w-2.tar/.%2Fwin7suspendresume.zip) (sourced from the [Codeplex Archive](https://ia903400.us.archive.org/view_archive.php?archive=/12/items/sylirana_ms_codeplex_zips/tars/mscodeplex-w-2.tar) on archive.org).
 
 ### Pre-requisite: Setup system for WoL
 
